@@ -3,59 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de String en JavaScript</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #175496;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #175496;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(207, 19, 19, 0.1);
-    }
-    h1 {
-      color: #c48cc0;
-      text-align: center;
-    }
-    p {
-      color: #c281d1;
-      line-height: 1.6;
-    }
-  </style>
+  <title>Ejemplo de JavaScript con String en HTML</title>
 </head>
 <body>
 
-<div class="container">
-  <h1>Ejemplo de String en JavaScript</h1>
-  <p>En este ejemplo, utilizaremos JavaScript para manipular cadenas de texto. Vamos a concatenar, dividir y mostrar un string.</p>
-  
-  <script>
-    // Definimos una cadena de texto
-    var frase = "¡Hola, mundo! Este es un ejemplo de string en JavaScript.";
-
-    // Mostramos la cadena original
-    document.write("<p><strong>Cadena original:</strong> " + frase + "</p>");
-
-    // Convertimos la cadena a mayúsculas
-    var mayusculas = frase.toUpperCase();
-    document.write("<p><strong>Cadena en mayúsculas:</strong> " + mayusculas + "</p>");
-
-    // Convertimos la cadena a minúsculas
-    var minusculas = frase.toLowerCase();
-    document.write("<p><strong>Cadena en minúsculas:</strong> " + minusculas + "</p>");
-
-    // Dividimos la cadena en palabras
-    var palabras = frase.split(" ");
-    document.write("<p><strong>Palabras:</strong> " + palabras.join(", ") + "</p>");
-  </script>
+<div id="demo">
+  <h2>Manipulación de String con JavaScript en HTML</h2>
+  <p id="demoText">Haz clic en el botón para transformar el texto.</p>
+  <button onclick="transformarTexto()">Transformar Texto</button>
 </div>
+
+<script>
+  function transformarTexto() {
+    // Obtener el elemento de párrafo por su id
+    var elementoTexto = document.getElementById("demoText");
+
+    // Obtener el texto del párrafo
+    var textoOriginal = elementoTexto.innerHTML;
+
+    // Transformar el texto a mayúsculas
+    var textoMayusculas = textoOriginal.toUpperCase();
+
+    // Mostrar el texto transformado en el mismo párrafo
+    elementoTexto.innerHTML = textoMayusculas;
+  }
+</script>
 
 </body>
 </html>
